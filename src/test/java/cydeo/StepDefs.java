@@ -20,9 +20,11 @@ public class StepDefs {
 
     @Given("^I am on the home page$")
     public void i_am_on_the_home_page() throws Throwable {
-        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get("http://etsy.com");
+        Driver.getDriver().findElement(By.xpath("//button[@class='wt-btn wt-btn--filled wt-mb-xs-0']")).click();
+
 
     }
 
