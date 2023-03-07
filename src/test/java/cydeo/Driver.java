@@ -2,6 +2,7 @@
 package cydeo;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,11 +37,12 @@ public class Driver {
                 case "remote-chrome":
                     try {
                         // assign your grid server address
-                        String gridAddress = "34.204.101.212";
+                        String gridAddress = "3.83.245.37";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
                         driver = new RemoteWebDriver(url, desiredCapabilities);
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
